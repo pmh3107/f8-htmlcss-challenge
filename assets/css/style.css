@@ -90,12 +90,12 @@ a {
 }
 .container-hero {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
 }
 /* Left - hero */
 .hero .left-hero {
-  width: 39.14%;
+  width: 39.15%;
 }
 
 .hero .left-hero .title {
@@ -139,7 +139,7 @@ a {
 /* Right hero */
 .hero .right-hero {
   position: relative;
-  width: 54.78%;
+  width: 54.79%;
 }
 .hero .right-hero img {
   float: right;
