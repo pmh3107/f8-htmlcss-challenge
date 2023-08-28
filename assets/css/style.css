@@ -333,6 +333,7 @@ a {
 
 /* Courses */
 .courses {
+  margin-bottom: 130px;
 }
 .courses .info .heading.lv1 {
   margin-top: 18px;
@@ -348,6 +349,10 @@ a {
   font-weight: 700;
   text-decoration-line: underline;
 }
+.courses .info .see-more:hover {
+  cursor: pointer;
+  opacity: 0.5;
+}
 .courses .info .desc.lv1 {
   margin-top: 19px;
   width: 525px;
@@ -362,24 +367,36 @@ a {
 .courses .item-courses {
   position: relative;
   width: 30.67%;
+  height: 517px;
+}
+.courses .item-courses .poster {
+  position: relative;
+}
+.courses .body-courses .in-img {
+  position: absolute;
+  width: 100%;
+  height: 393px;
+  border-radius: 8px;
+  opacity: 0.35;
+  background: #d0efed;
 }
 .courses .body-courses img {
   width: 100%;
   height: 393px;
-  /* object-fit: cover; */
+  object-fit: cover;
   border-radius: 8px;
-  opacity: 0.55;
-  background: #ff0000;
 }
 .courses .body-courses .detail {
   position: absolute;
-  top: 332px;
   left: 17px;
+  bottom: 0px;
   width: 325px;
   height: 195px;
   padding: 18px 0 29px 25px;
   border-radius: 8px;
   background: #fff;
+}
+.courses .body-courses .detail:hover {
   box-shadow: 0px 16px 90px 0px rgba(0, 0, 0, 0.05);
 }
 .courses .item-courses .title {
@@ -425,4 +442,25 @@ a {
   height: 6px;
   border-radius: 50%;
   background-color: #1ebfc1;
+}
+/* Countdown */
+.countdown {
+  padding: 130px 0;
+}
+.countdown .columns {
+  display: flex;
+  justify-content: space-between;
+  height: 131px;
+  width: 862px;
+  margin: 0 auto;
+}
+.countdown .column .number {
+  color: #0d1111;
+  font-size: 6.2rem;
+  font-weight: 700;
+  line-height: 1.5;
+}
+.countdown .column .desc.lv1 {
+  margin-top: 11px;
+  text-align: center;
 }
