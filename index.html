@@ -343,7 +343,7 @@
             <div class="container-comment">
               <div class="run-comments">
                 <!-- comment 1 -->
-                <div class="run-comment">
+                <div class="run-comment" id="run-comment">
                   <img src="assets/img/icon/Icon-comment.svg" alt="" />
                   <p class="desc line-clamp line-4">
                     “They are the best people. And this is the suitable platform
@@ -353,8 +353,30 @@
                     <strong>Ben Flakes,</strong> student.
                   </p>
                 </div>
-                <!-- comment 2 _ example -->
-                <div class="run-comment">
+                <!-- comment 1 -->
+                <div class="run-comment" id="run-comment">
+                  <img src="assets/img/icon/Icon-comment.svg" alt="" />
+                  <p class="desc line-clamp line-4">
+                    “They are the best people. And this is the suitable platform
+                    to learn from distance.”
+                  </p>
+                  <p class="student-name">
+                    <strong>Ben Flakes,</strong> student.
+                  </p>
+                </div>
+                <!-- comment 1 -->
+                <div class="run-comment" id="run-comment">
+                  <img src="assets/img/icon/Icon-comment.svg" alt="" />
+                  <p class="desc line-clamp line-4">
+                    “They are the best people. And this is the suitable platform
+                    to learn from distance.”
+                  </p>
+                  <p class="student-name">
+                    <strong>Ben Flakes,</strong> student.
+                  </p>
+                </div>
+                <!-- comment 1 -->
+                <div class="run-comment" id="run-comment">
                   <img src="assets/img/icon/Icon-comment.svg" alt="" />
                   <p class="desc line-clamp line-4">
                     “They are the best people. And this is the suitable platform
@@ -366,17 +388,48 @@
                 </div>
               </div>
               <div class="buttons">
-                <a href="#!">
-                  <div class="btn-action">
-                    <img src="assets/img/icon/go-back.svg" alt="" /></div
-                ></a>
-                <a href="#!">
-                  <div class="btn-action">
-                    <img src="assets/img/icon/go-on.svg" alt="" />
-                  </div>
-                </a>
+                <button class="btn-action" onclick="runCommentBack()">
+                  <img src="assets/img/icon/go-back.svg" alt="" />
+                </button>
+                <button class="btn-action" onclick="runCommentNext()">
+                  <img src="assets/img/icon/go-on.svg" alt="" />
+                </button>
               </div>
             </div>
+            <script>
+              // Khai báo biến index để lưu trữ chỉ số của comment hiện tại
+              var index = 0;
+              // Lấy tất cả các phần tử có class là run-comment
+              var comments = document.getElementsByClassName("run-comment");
+
+              function runCommentNext() {
+                // Kiểm tra xem có còn comment nào để chạy hay không
+                if (index < comments.length) {
+                  // Chạy comment hiện tại
+                  comments[index].style.transition = "all ease 1s";
+                  comments[index].style.transform = "translateX(-100%)";
+                  // Tăng biến index lên 1
+                  index++;
+                } else {
+                  // Nếu không còn comment nào, thông báo cho người dùng
+                  alert("Không còn comment nào để chạy");
+                }
+              }
+
+              function runCommentBack() {
+                // Kiểm tra xem có comment nào đã chạy hay không
+                if (index > 0) {
+                  // Giảm biến index xuống 1
+                  index--;
+                  // Đưa comment về vị trí ban đầu
+                  comments[index].style.transition = "all ease 1s";
+                  comments[index].style.transform = "translateX(0%)";
+                } else {
+                  // Nếu không có comment nào đã chạy, thông báo cho người dùng
+                  alert("Không có comment nào đã chạy");
+                }
+              }
+            </script>
             <!-- Right Comment -->
             <div class="avatars">
               <img
