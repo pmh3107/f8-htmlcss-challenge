@@ -89,6 +89,8 @@
     <link rel="stylesheet" href="assets/css/reset.css" />
     <link rel="stylesheet" href="assets/css/style.css" />
   </head>
+  <
+  <script type="text/javascript" src="assets\Javascript\index.js"></script>
   <body>
     <header class="header fixed">
       <div class="main-content">
@@ -353,15 +355,17 @@
                     <strong>Ben Flakes,</strong> student.
                   </p>
                 </div>
-                <!-- comment 1 -->
+                <!-- comment 2 -->
                 <div class="run-comment" id="run-comment">
                   <img src="assets/img/icon/Icon-comment.svg" alt="" />
                   <p class="desc line-clamp line-4">
-                    “They are the best people. And this is the suitable platform
-                    to learn from distance.”
+                    “I have identified growth areas that can help me with my
+                    career progression: communication, focus, and the importance
+                    of work-life balance.”
                   </p>
                   <p class="student-name">
-                    <strong>Ben Flakes,</strong> student.
+                    <strong>Employee of a company,</strong>
+                    BetterUp Member.
                   </p>
                 </div>
                 <!-- comment 1 -->
@@ -396,40 +400,6 @@
                 </button>
               </div>
             </div>
-            <script>
-              // Khai báo biến index để lưu trữ chỉ số của comment hiện tại
-              var index = 0;
-              // Lấy tất cả các phần tử có class là run-comment
-              var comments = document.getElementsByClassName("run-comment");
-
-              function runCommentNext() {
-                // Kiểm tra xem có còn comment nào để chạy hay không
-                if (index < comments.length) {
-                  // Chạy comment hiện tại
-                  comments[index].style.transition = "all ease 1s";
-                  comments[index].style.transform = "translateX(-100%)";
-                  // Tăng biến index lên 1
-                  index++;
-                } else {
-                  // Nếu không còn comment nào, thông báo cho người dùng
-                  alert("Không còn comment nào để chạy");
-                }
-              }
-
-              function runCommentBack() {
-                // Kiểm tra xem có comment nào đã chạy hay không
-                if (index > 0) {
-                  // Giảm biến index xuống 1
-                  index--;
-                  // Đưa comment về vị trí ban đầu
-                  comments[index].style.transition = "all ease 1s";
-                  comments[index].style.transform = "translateX(0%)";
-                } else {
-                  // Nếu không có comment nào đã chạy, thông báo cho người dùng
-                  alert("Không có comment nào đã chạy");
-                }
-              }
-            </script>
             <!-- Right Comment -->
             <div class="avatars">
               <img
